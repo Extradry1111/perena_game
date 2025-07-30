@@ -1,0 +1,64 @@
+body, html {
+    margin: 0; padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    height: 100%; overflow: hidden;
+    background: #3C0064;
+    color: #EAEAFF;
+  }
+  .container {
+    text-align: center; padding: 30px 20px; position: relative; z-index: 2;
+  }
+  .title {
+    font-size: 48px; color: #EAEAFF;
+    text-shadow: 0 0 20px #550088, 0 0 40px #7700bb;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    font-size: 18px; color: #EAEAFF;
+    text-shadow: 0 0 10px #550088;
+    margin-bottom: 30px;
+  }
+  #scoreboard { font-size: 20px; margin-bottom: 20px;
+    display: flex; justify-content: center; gap: 50px;
+  }
+  .grid { display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 15px; justify-content: center; margin: auto;
+  }
+  .hole {
+    width: 120px; height: 120px;
+    background-color: #550088;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #7700bb;
+    transition: transform 0.3s ease;
+  }
+  .mole {
+    background-image: url('images/my-mole.png');
+    background-size: contain; background-repeat: no-repeat;
+    background-position: center;
+    width: 100%; height: 100%;
+    animation: pop 0.3s ease;
+    cursor: pointer;
+  }
+  @keyframes pop {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .glow-button {
+    margin-top: 30px; padding: 10px 30px;
+    background-color: #550088; color: #fff;
+    border: 2px solid #EAEAFF; border-radius: 6px;
+    box-shadow: 0 0 20px #7700bb; transition: 0.3s;
+    font-size: 16px; cursor: pointer;
+  }
+  .glow-button:hover {
+    background-color: #7700bb;
+    box-shadow: 0 0 30px #aa00ff;
+  }
+  .hidden { display: none; }
+  .hole:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #aa00ff;
+  }
+  
